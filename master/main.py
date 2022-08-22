@@ -2,13 +2,13 @@
 
 # import necessary modules and side functions
 import pandas as pd
-from inputFile import importInputFile
-from inputControl import demandControl, stockControl
-from offcutSearch import offcutSearch
-from prepareCutting import prepareCutting
-from cutting import cutting
-from outputGeneration import slitPlanGeneration
-from updateStock import updateSlitStock, updateMotherStock
+from packages.inputFile import importInputFile
+from packages.inputControl import demandControl, stockControl
+from packages.offcutSearch import offcutSearch
+from packages.prepareCutting import prepareCutting
+from packages.cutting import cutting
+from packages.outputGeneration import slitPlanGeneration
+from packages.updateStock import updateSlitStock, updateMotherStock
 
 
 def main():
