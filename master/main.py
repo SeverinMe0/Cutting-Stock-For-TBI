@@ -96,7 +96,7 @@ def main():
             )
             print(slit_plan)
 
-            slit_plan.to_excel("./master/output/slit_plan_" + grade + ".xlsx")
+            slit_plan.to_excel("./output/slit_plan_" + grade + ".xlsx")
 
             updateSlitStock(stock_slit_coil_df, to_take_from_stock_df, slit_plan)
             updateMotherStock(stock_mother_coil_df, slit_plan)
