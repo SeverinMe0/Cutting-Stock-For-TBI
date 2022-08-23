@@ -60,6 +60,15 @@ $$\forall j, \; s_{j}\geq 8.0*t_{j}$$
 $$\forall j, \; s_{j}\le 600.0*t_{j}$$
 We therefore have, if $t_{j}=0$, $s_{j}=0$, and if $t_{j}=1$, $s_{j} \in [8,600]$ while introducing 'only' $n$ new binary variable. **Coupled with constraint $\bold{(2)}$, every cutting pattern will either use the entirety of a coil to meet the demand, or generate an offcut of width multiple of $ \bold{10}$, and of width between $\bold{80 mm}$ and $\bold{6000 mm}$.**
 
+## Create an executable
+- install pyinstaller using pip
+- type in your command promt at the location of main.py:
+pyinstaller --noconfirm --onefile --console --icon "C:/Users/sever/Downloads/Custom-Icon-Design-Office-Calculator.ico" --name "SlitPlanGenerator" --add-data "C:/Users/sever/OneDrive/Bureau/Cutting-Stock-For-TBI/master/data;data/" --hidden-import "mip" --additional-hooks-dir "C:/Users/sever/OneDrive/Bureau/Cutting-Stock-For-TBI/master"  "C:/Users/sever/OneDrive/Bureau/Cutting-Stock-For-TBI/master/main.py" --clean --windowed
+
+
+
+
+
 ## **References**
 
 [1]: H. Paul Williams, "Model Building in Mathematical Programming, 5th Edition", March 2013, ISBN: 978-1-118-44333-0.

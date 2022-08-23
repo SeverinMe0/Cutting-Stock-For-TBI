@@ -10,7 +10,6 @@ from packages.cutting import cutting
 from packages.outputGeneration import slitPlanGeneration
 from packages.updateStock import updateSlitStock, updateMotherStock
 
-
 def main():
     # parameters
     u_bound = 600.0
@@ -96,14 +95,21 @@ def main():
             )
             print(slit_plan)
 
+            # Output generation in excel format
             slit_plan.to_excel("./output/slit_plan_" + grade + ".xlsx")
 
             updateSlitStock(stock_slit_coil_df, to_take_from_stock_df, slit_plan)
             updateMotherStock(stock_mother_coil_df, slit_plan)
 
+
+
             print(stock_mother_coil_df)
         else:
             print("No demand for grade {}".format(grade))
+
+    # the updated stock is saved in a new folder
+    stock_mother_coil_df.to_excel("./output/updatedStock/updated_stock_mother_coil.xlsx")
+    stock_slit_coil_df.to_excel("./output/updatedStock/updated_stock_slit_coil.xlsx")
 
 
 if __name__ == main():
