@@ -12,7 +12,7 @@ from packages.updateStock import updateSlitStock, updateMotherStock
 
 def main():
     # parameters
-    u_bound = 600.0
+    u_bound = 500.0
     l_bound = 8.0
     grade_list = [
         "M4_NOMAL",
@@ -48,6 +48,8 @@ def main():
             to_take_from_stock_df
         )
     )
+
+    to_take_from_stock_df.to_excel('./output/coils_requested_to_take_from_slit_coils.xlsx')
 
     # we can now compute the cutting patterns using df 'to_cut_df' and stock_mother_coil_df
     # we will proceed grade of material per grade of material
