@@ -1,4 +1,4 @@
-"""This file take into input the result of the algorithm and generate a cutting plan on excel"""
+"""This file take into input the result of the algorithm cutting.py and generate a cutting plan on excel"""
 
 import pandas as pd
 

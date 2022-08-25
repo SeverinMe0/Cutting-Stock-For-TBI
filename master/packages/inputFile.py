@@ -1,4 +1,4 @@
-"""This function the files necessary to the slitting process:
+"""This function extracts the files necessary to the slitting process:
 the stock of mother coils, the stock of offcuts, the customer request."""
 
 """TO DO: location of the file might change. Adding in argument the location can be sufficient"""

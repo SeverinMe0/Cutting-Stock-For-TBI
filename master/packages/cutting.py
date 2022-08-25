@@ -5,10 +5,11 @@ and constrained slack variable to generate offcut of standard width.
 
 Input: 
     - stock_width_l: coil width of coils in stock
-    - to_cut_grade_df: coil width and number requested 
+    - to_cut_grade_df: coil width and number requested
+    - upper_bound & lower bounds for slack variables.
     
 Output: 
-    - mip.Model containing optimal cutting patterns."""
+    - Object mip.Model containing results of optimization of the MIP Model."""
 
 from mip import Model, xsum, BINARY, INTEGER
 

@@ -1,4 +1,4 @@
-"""This function appends a copple key/value to a dictionary"""
+"""This function appends a couple key/value to a dictionary"""
 
 
 def append_value(dict_obj, key, value):

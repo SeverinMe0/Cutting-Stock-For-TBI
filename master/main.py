@@ -12,7 +12,7 @@ from packages.updateStock import updateSlitStock, updateMotherStock
 
 def main():
     # parameters
-    u_bound = 500.0
+    u_bound = 50.0  # upper and lower bound for slack variable
     l_bound = 8.0
     grade_list = [
         "M4_NOMAL",
@@ -25,7 +25,7 @@ def main():
         "M75_NIPON",
         "M75_BAO",
     ]
-    density = 7.65
+    density = 7.65  # density of the material for weigth computation
 
     # we begin with importing the input files
     (
@@ -57,6 +57,7 @@ def main():
         stock_width_l, to_cut_grade_df = prepareCutting(
             grade, stock_mother_coil_df, to_cut_df
         )
+        # if there is demand for this grade
         if to_cut_grade_df.dropna().empty == False:
             trim_value = trim_df.loc[trim_df["Grade"] == grade]["Trim (mm)"].to_list()[
                 0
