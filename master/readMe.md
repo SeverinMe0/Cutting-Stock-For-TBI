@@ -135,7 +135,7 @@ under the platform Windows-10-10.0.19043-SP0 64bits.
 This program mimics the complete process followed by manufacturers when they create a slit plan. This process is detailed in the following pseudo-algorithm.
 
 <figure>
-<img src=img/Algo_main.png>
+<img src=img/Algo_main.PNG>
 <figcaption ><b>Figure 11 - Pseudo-algorithm implemented in main.py to create slit plans."</b></figcaption>
 </figure>
 
